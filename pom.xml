@@ -11,8 +11,12 @@
     <groupId>com.joker_yue</groupId>
     <artifactId>SpringCloudLearn</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>SpringCloudLearn</name>
     <description>SpringCloudLearn</description>
+    <modules>
+        <module>SpringBoot</module>
+    </modules>
     <properties>
         <java.version>1.8</java.version>
     </properties>
