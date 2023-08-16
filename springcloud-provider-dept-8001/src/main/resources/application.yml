@@ -28,3 +28,7 @@ eureka:
   instance:
     instance-id: springcloud-provider-dept8001 # 修改默认描述信息
 
+# info配置
+info:
+  app.name: joker-springcloud
+  company.name: github.com/Joker2Yue
