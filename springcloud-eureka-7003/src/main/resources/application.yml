@@ -1,5 +1,5 @@
 server:
-  port: 7001
+  port: 7003
 
 # Eureka配置
 eureka:
@@ -10,6 +10,6 @@ eureka:
     fetch-registry: false   # 如果为false，表示自己为注册中心
     service-url: # 监控页面
       # 集群（关联）
-      defaultZone: http://127.0.0.1:7002/eureka/,http://127.0.0.1:7003/eureka
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka
 
 debug: true
