@@ -1,0 +1,15 @@
+server:
+  port: 7001
+
+# Eureka配置
+eureka:
+  instance:
+    hostname: localhost # Eureka服务端的名字（实例名称）
+  client:
+    register-with-eureka: false   # 是否向Eureka注册中心注册自己。由于我们现在在写服务器，不用向自己注册自己
+    fetch-registry: false   # 如果为false，表示自己为注册中心
+    service-url: # 监控页面
+      # 干掉默认URL： public static final String DEFAULT_URL = "http://localhost:8761" + DEFAULT_PREFIX + "/";
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+debug: true
