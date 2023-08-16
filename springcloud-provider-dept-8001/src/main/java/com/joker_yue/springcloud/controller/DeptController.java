@@ -4,10 +4,7 @@ import com.joker_yue.springcloud.pojo.Dept;
 import com.joker_yue.springcloud.service.DeptService;
 import com.joker_yue.springcloud.service.DeptServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,7 +24,7 @@ public class DeptController {
         return deptService.addDept(dept);
     }
 
-    @PostMapping("/dept/get/{id}")
+    @GetMapping("/dept/get/{id}")
     public Dept getDept(@PathVariable("id") Long id){
         return deptService.queryById(id);
     }
