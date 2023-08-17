@@ -19,6 +19,25 @@
 
     <!-- 消费者端不需要数据库连接，仅需要实体类+web -->
     <dependencies>
+        <!-- ribbon -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.springframework.cloud</groupId> -->
+        <!--     <artifactId>spring-cloud-starter-ribbon</artifactId> -->
+        <!--     <version>1.4.7.RELEASE</version> -->
+        <!-- </dependency> -->
+        <!-- eureka -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.springframework.cloud</groupId> -->
+        <!--     <artifactId>spring-cloud-starter-eureka</artifactId> -->
+        <!--     <version>1.4.7.RELEASE</version> -->
+        <!-- </dependency> -->
+
+        <!-- 使用新的Netflix Eureka，已经包含了Ribbon -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>2.2.9.RELEASE</version>
+        </dependency>
         <!-- 实体类 -->
         <dependency>
             <groupId>com.joker_yue</groupId>
