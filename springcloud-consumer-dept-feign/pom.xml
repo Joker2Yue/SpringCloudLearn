@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.joker_yue</groupId>
+        <artifactId>SpringCloudLearn</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>springcloud-consumer-dept-feign</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 消费者端不需要数据库连接，仅需要实体类+web -->
+    <dependencies>
+        <!-- ribbon -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.springframework.cloud</groupId> -->
+        <!--     <artifactId>spring-cloud-starter-ribbon</artifactId> -->
+        <!--     <version>1.4.7.RELEASE</version> -->
+        <!-- </dependency> -->
+        <!-- eureka -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.springframework.cloud</groupId> -->
+        <!--     <artifactId>spring-cloud-starter-eureka</artifactId> -->
+        <!--     <version>1.4.7.RELEASE</version> -->
+        <!-- </dependency> -->
+
+        <!-- 使用新的Netflix Eureka -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--  Ribbon：负载均衡，使用2.2.9.RELEASE 不需要了，已经集成  -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.springframework.cloud</groupId> -->
+        <!--     <artifactId>spring-cloud-starter-netflix-ribbon</artifactId> -->
+        <!-- </dependency> -->
+
+        <!-- 实体类 -->
+        <dependency>
+            <groupId>com.joker_yue</groupId>
+            <artifactId>springcloud-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- 热部署 -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.springframework.boot</groupId> -->
+        <!--     <artifactId>spring-boot-devtools</artifactId> -->
+        <!-- </dependency> -->
+    </dependencies>
+
+</project>
