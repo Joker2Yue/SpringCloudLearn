@@ -6,16 +6,16 @@
 
 
     <insert id="addDept" parameterType="Dept">
-        insert into db01.dept (dname,db_source)
+        insert into db03.dept (dname,db_source)
         values (#{dname},DATABASE())
     </insert>
 
     <select id="queryById" resultType="com.joker_yue.springcloud.pojo.Dept">
-        select * from db01.dept where deptno = #{deptno};
+        select * from db03.dept where deptno = #{deptno};
     </select>
 
     <select id="queryAll" resultType="com.joker_yue.springcloud.pojo.Dept">
         select *
-        from db01.dept;
+        from db03.dept;
     </select>
 </mapper>
