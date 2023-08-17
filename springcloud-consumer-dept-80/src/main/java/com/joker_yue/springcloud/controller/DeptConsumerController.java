@@ -2,10 +2,8 @@ package com.joker_yue.springcloud.controller;
 
 import com.joker_yue.springcloud.pojo.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -26,8 +24,10 @@ public class DeptConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    // 请求的地址常量：
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    // 做负载均衡我们不应该写死指定的http请求，应该spring.application.name
+    // private static final String REST_URL_PREFIX = "http://localhost:8001";// 请求的地址常量
+    // 主机名找不到的删除这个包spring-cloud-starter-netflix-ribbon，新版的自带负载均衡，删不掉的想办法删除，用这个就会出错
+    private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
     @RequestMapping("/consumer/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id) {
@@ -43,7 +43,7 @@ public class DeptConsumerController {
     }
 
     @RequestMapping("/consumer/dept/list")
-    public List<Dept> list(){
+    public List<Dept> list() {
         return restTemplate.getForObject(REST_URL_PREFIX + "/dept/list", List.class);
     }
 
