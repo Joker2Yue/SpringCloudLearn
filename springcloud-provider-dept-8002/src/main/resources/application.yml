@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 # mybatis\u914D\u7F6E
 mybatis:
   type-aliases-package: com.joker_yue.springcloud.pojo
@@ -9,11 +9,11 @@ mybatis:
 # spring\u914D\u7F6E
 spring:
   application:
-    name: springcloud-provider-dept   # 3个服务的名字一样
+    name: springcloud-provider-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db01?useSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/db02?useSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: root
 
@@ -26,9 +26,9 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka # 使用集群注册
   instance:
-    instance-id: springcloud-provider-dept8001 # 修改默认描述信息
+    instance-id: springcloud-provider-dept8002 # 修改默认描述信息
 
 # info配置
 info:
-  app.name: joker-springcloud-prpvider-8001
+  app.name: joker-springcloud-prpvider-8002
   company.name: github.com/Joker2Yue
