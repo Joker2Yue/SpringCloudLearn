@@ -18,7 +18,7 @@ import java.util.List;
  */
 // 参数：服务名
 @Component  // 为了能够注入Spring
-@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT")   // 可以被服务直接调用
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT",fallbackFactory = DeptClientServiceFallbackFactory.class )   // 可以被服务直接调用。前一个参数为 服务名,后一个参数为降级实现类
 public interface DeptClientService {
     @GetMapping("/dept/get/{id}")
     Dept queryById(@PathVariable("id") Long id);
