@@ -1,6 +1,7 @@
 package com.joker_yue.myrule;
 
 import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,8 +23,8 @@ public class MyEurekaRule {
     @Bean
     public IRule myRule() {
         // 随机
-        // return new RandomRule();     // 用别人的
-        return new MyRandomRule();      // 用自己的
+        return new RandomRule();     // 用别人的
+        // return new MyRandomRule();      // 用自己的
     }
 
 }
