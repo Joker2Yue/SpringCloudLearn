@@ -1,4 +1,4 @@
-# 用于springcloud-config-dept-8001的远程配置文件
+# 用于springcloud-config-dept-8001 的远程配置文件
 spring:
   profiles:
     active: dev
