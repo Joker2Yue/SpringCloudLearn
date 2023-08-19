@@ -1,0 +1,16 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: springcloud-config-server-3344
+    # 连接远程仓库
+  cloud:
+    config:
+      server:
+        git:
+          # 注意是https的而不是ssh
+          uri: https://github.com/Joker2Yue/SpringCloudLearn.git
+          # 通过 config-server可以连接到git，访问其中的资源以及配置~
+          default-label: main   # 默认访问分支名，Github将默认分支名改成main了
+          #username:
+          #password:
