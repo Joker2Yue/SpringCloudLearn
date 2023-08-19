@@ -1,6 +1,6 @@
 # springcloud-config-client-3355 客户端配置文件
 spring:
-  profile:
+  profiles:
     active: dev
 
 ---
