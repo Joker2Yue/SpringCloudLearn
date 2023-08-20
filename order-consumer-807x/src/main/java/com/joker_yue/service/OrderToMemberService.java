@@ -1,5 +1,6 @@
 package com.joker_yue.service;
 
+import com.joker_yue.loadbalance.RandomBalance;
 import com.joker_yue.loadbalance.RoundLoadBalance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -22,6 +23,8 @@ public class OrderToMemberService {
     private RestTemplate restTemplate;
     @Autowired
     private RoundLoadBalance roundLoadBalance;
+    @Autowired
+    private RandomBalance randomBalance;
 
     /**
      * 订单服务调用到我们的会员服务接口
@@ -34,8 +37,11 @@ public class OrderToMemberService {
         // List<ServiceInstance> instances = discoveryClient.getInstances("member-producer-808x");
         // ServiceInstance serviceInstance = instances.get(0);
 
-        // 将获取服务实例的规则搭配上负载均衡算法
-        ServiceInstance serviceInstance = roundLoadBalance.getInstances("member-producer-808x");
+        // 将获取服务实例的规则搭配上负载均衡-轮询算法
+        // ServiceInstance serviceInstance = roundLoadBalance.getInstances("member-producer-808x");
+
+        // 将获取服务实例的规则搭配上负载均衡-随机算法
+        ServiceInstance serviceInstance = randomBalance.getInstances("member-producer-808x");
 
         // 会员服务的IP和端口
         String memberUrl = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/getMember";

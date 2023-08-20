@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>member-producer-808x</artifactId>
+    <artifactId>member-producer-8082</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
