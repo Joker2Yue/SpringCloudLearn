@@ -16,7 +16,8 @@
     <description>SpringCloudAlibaba</description>
     <modules>
         <module>order-consumer-807x</module>
-        <module>member-producer-808x</module>
+        <module>member-producer-8081</module>
+        <module>member-producer-8082</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
