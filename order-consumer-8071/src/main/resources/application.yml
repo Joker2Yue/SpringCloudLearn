@@ -1,5 +1,5 @@
 server:
-  port: 8070
+  port: 8071
 spring:
   application:
     name: order-consumer-807x # 在注册中心展示的服务名称

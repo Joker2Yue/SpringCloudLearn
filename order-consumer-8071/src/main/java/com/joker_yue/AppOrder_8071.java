@@ -16,9 +16,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @date 2023/8/20 16:06
  */
 @SpringBootApplication
-public class AppOrder_8070 {
+public class AppOrder_8071 {
     public static void main(String[] args) {
-        SpringApplication.run(AppOrder_8070.class, args);
+        SpringApplication.run(AppOrder_8071.class, args);
     }
 
     /**

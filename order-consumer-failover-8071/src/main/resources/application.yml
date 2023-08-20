@@ -1,0 +1,11 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: order-consumer-807x # 在注册中心展示的服务名称
+
+# 消费者无需向注册中心注册也能够使用服务
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848 # Nacos服务注册中心地址

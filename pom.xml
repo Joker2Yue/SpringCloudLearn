@@ -15,7 +15,8 @@
     <name>SpringCloudAlibaba</name>
     <description>SpringCloudAlibaba</description>
     <modules>
-        <module>order-consumer-807x</module>
+        <module>order-consumer-8071</module>
+        <module>order-consumer-failover-8071</module>
         <module>member-producer-8081</module>
         <module>member-producer-8082</module>
     </modules>
