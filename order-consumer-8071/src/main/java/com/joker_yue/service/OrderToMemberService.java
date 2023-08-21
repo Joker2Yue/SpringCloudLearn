@@ -6,9 +6,12 @@ import com.joker_yue.loadbalance.WeightLoadBalance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.Resource;
 
 /**
  * @author Joker
@@ -26,6 +29,9 @@ public class OrderToMemberService {
     private RandomBalance randomBalance;
     @Autowired
     private WeightLoadBalance weightLoadBalance;
+
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
 
     /**
      * 订单服务调用到我们的会员服务接口
@@ -45,7 +51,10 @@ public class OrderToMemberService {
         // ServiceInstance serviceInstance = randomBalance.getInstances("member-producer-808x");
 
         // 将获取服务实例的规则搭配上负载均衡-权重算法
-        ServiceInstance serviceInstance = weightLoadBalance.getInstances("member-producer-808x");
+        // ServiceInstance serviceInstance = weightLoadBalance.getInstances("member-producer-808x");
+
+        // Ribbon 轮询 查找服务实例
+        ServiceInstance serviceInstance = loadBalancerClient.choose("member-producer-808x");
 
         // 会员服务的IP和端口
         String memberUrl = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/getMember";
