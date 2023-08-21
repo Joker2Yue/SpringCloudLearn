@@ -13,12 +13,15 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/member-producer-8082/pom.xml" />
         <option value="$PROJECT_DIR$/order-consumer-failover-8071/pom.xml" />
+        <option value="$PROJECT_DIR$/order-consumer-8071/pom.xml" />
+        <option value="$PROJECT_DIR$/member-producer-8081/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/joker-oder-producer/pom.xml" />
         <option value="$PROJECT_DIR$/joker-order-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/order-consumer-8071/order-consumer-8072/pom.xml" />
       </set>
     </option>
   </component>
