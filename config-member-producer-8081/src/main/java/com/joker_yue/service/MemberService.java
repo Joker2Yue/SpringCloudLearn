@@ -2,6 +2,7 @@ package com.joker_yue.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2023/8/20 14:17
  */
 @RestController
-@RefreshScope   // 自动刷新
+// @RefreshScope   // 自动刷新
+@Scope("prototype")    // 设置为原型
 public class MemberService {
     // 自动填写端口号
     @Value("${server.port}")
