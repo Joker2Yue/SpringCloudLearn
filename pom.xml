@@ -19,6 +19,7 @@
         <module>order-consumer-failover-8071</module>
         <module>member-producer-8081</module>
         <module>member-producer-8082</module>
+        <module>config-member-producer-8081</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
