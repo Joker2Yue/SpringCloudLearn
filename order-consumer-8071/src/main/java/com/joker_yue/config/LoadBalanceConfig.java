@@ -1,5 +1,6 @@
 package com.joker_yue.config;
 
+import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,9 +19,14 @@ public class LoadBalanceConfig {
      *
      * @return com.netflix.loadbalancer.RandomRule
      */
+    // @Bean
+    // public RandomRule randomRule() {
+    //     return new RandomRule();
+    // }
 
-    @Bean
-    public RandomRule randomRule() {
-        return new RandomRule();
-    }
+    // 下方也可以进行注入
+    // @Bean
+    // public IRule myRule() {
+    //     return new RibbonWeightLoadBalance();
+    // }
 }
