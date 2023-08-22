@@ -16,6 +16,8 @@
         <option value="$PROJECT_DIR$/order-consumer-8071/pom.xml" />
         <option value="$PROJECT_DIR$/member-producer-8081/pom.xml" />
         <option value="$PROJECT_DIR$/config-member-producer-8081/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos-cluster-member-producer-8081/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos-cluster-order-consumer-8071/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

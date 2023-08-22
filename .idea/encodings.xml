@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/joker-order-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/member-producer-8081/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/member-producer-8082/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-cluster-member-producer-8081/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nacos-cluster-order-consumer-8071/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-consumer-8071/order-consumer-8072/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-consumer-8071/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-consumer-failover-8071/src/main/java" charset="UTF-8" />

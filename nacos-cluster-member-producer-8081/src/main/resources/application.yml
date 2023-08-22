@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: member-producer-808x # 在注册中心展示的服务名称
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8748, 127.0.0.1:8849, 127.0.0.1:8950 # Nacos服务注册中心地址
