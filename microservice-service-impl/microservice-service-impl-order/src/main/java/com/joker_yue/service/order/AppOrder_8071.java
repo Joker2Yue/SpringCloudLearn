@@ -3,9 +3,6 @@ package com.joker_yue.service.order;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.cloud.openfeign.FeignClient;
-
-import javax.swing.*;
 
 /**
  * @author Joker
@@ -14,8 +11,8 @@ import javax.swing.*;
  */
 @SpringBootApplication
 @EnableFeignClients // 开启feign客户端
-public class AppOrder {
+public class AppOrder_8071 {
     public static void main(String[] args) {
-        SpringApplication.run(AppOrder.class,args);
+        SpringApplication.run(AppOrder_8071.class,args);
     }
 }

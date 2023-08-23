@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2023/8/23 17:19
  */
 @SpringBootApplication
-public class AppMember {
+public class AppMember_8081 {
     public static void main(String[] args) {
-        SpringApplication.run(AppMember.class, args);
+        SpringApplication.run(AppMember_8081.class, args);
     }
 }

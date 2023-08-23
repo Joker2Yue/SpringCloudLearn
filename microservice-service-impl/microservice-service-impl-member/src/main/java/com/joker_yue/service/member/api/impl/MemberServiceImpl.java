@@ -1,6 +1,7 @@
 package com.joker_yue.service.member.api.impl;
 
 import com.joker_yue.service.member.api.MemberService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,6 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class MemberServiceImpl implements MemberService {
+
+    @Value("${server.port}")
+    private String serverPort;
+
     /**
      * <p> 在此处不需要加注解@GetMapping，因为继承过来的话注解也会继承过来 </p>
      * <p> 2023/8/23,17:02 </p>
@@ -19,6 +24,6 @@ public class MemberServiceImpl implements MemberService {
      */
     @Override
     public String getUser(Integer id) {
-        return "我是会员服务";
+        return "我是会员服务"+serverPort;
     }
 }
