@@ -35,18 +35,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Gateway 注意，添加了gateway就不能添加 spring-boot-starter-web，容易冲突！ -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
             <version>2.2.9.RELEASE</version>
         </dependency>
-
-        <!-- Spring Boot starter web -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <!--   Spring Cloud Alibaba Nacos  -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
