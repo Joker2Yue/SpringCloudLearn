@@ -1,8 +1,0 @@
-server:
-  port: 9001
-
-# 解决监控端Unable to connect to Command Metric Stream.
-hystrix:
-  dashboard:
-    proxy-stream-allow-list: "*"
-#    proxy-stream-allow-list: localhost # 也可以写成localhost，因为我们全部跑在本地
