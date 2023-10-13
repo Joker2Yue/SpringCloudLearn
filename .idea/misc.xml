@@ -11,15 +11,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-consumer-dept-feign/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-provider-dept-hytrix-8001/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-config-server-3344/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/springcloud-provider-dept-8001/springcloud-provider-dept-8002/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="OpenJDK1.8" project-jdk-type="JavaSDK">

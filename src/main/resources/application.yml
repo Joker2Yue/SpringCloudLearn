@@ -1,0 +1,28 @@
+server:
+  port: 80  # 指定网关的监听端口为80
+
+# 服务网关名称
+spring:
+  application:
+    name: joker-gateway  # 定义服务网关的应用名称
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 开启以服务id去注册中心上获取转发地址
+          enabled: true
+        # 路由策略
+      routes:
+        # 路由id
+        - id: member  # 路由ID，用于标识该路由规则
+          # 转发到如下地址
+          uri: lb://member-producer-808x/  # 转发到名为"member-producer-808x"的服务，使用负载均衡策略
+          filters:
+            - StripPrefix=1  # 去除前缀
+          # 匹配规则，
+          predicates:
+            - Path=/member/**  # 使用路径匹配规则，当请求路径匹配"/member/**"时触发该路由
+    # Nacos配置
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
